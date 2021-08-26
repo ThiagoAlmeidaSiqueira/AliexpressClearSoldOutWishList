@@ -50,7 +50,7 @@ element = driver.find_element_by_id("fm-login-password")
 element.send_keys(myPassword)
 driver.find_element_by_xpath("/html/body/div[2]/div/div/div/div/button").click()
 
-driver.switch_to_default_content()
+driver.switch_to.default_content()
 element = WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID, "nav-user-account")))
 
 for i in  tqdm(range(1,51,1)):
